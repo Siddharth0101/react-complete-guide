@@ -1,35 +1,32 @@
-import Expense from "./components/expense";
-import logo from "./logo.svg";
-import "./App.css";
+import Expenses from "./Expenses";
 
 function App() {
   const expenses = [
     {
       id: "e1",
-      title: "toilet paper",
-      amount: 100,
-      date: new Date(2023, 12),
+      title: "Toilet Paper",
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: "e3",
+      title: "Car Insurance",
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
     },
     {
-      id: "e2",
-      title: "TV",
-      amount: 500,
-      date: new Date(2023, 11),
+      id: "e4",
+      title: "New Desk (Wooden)",
+      amount: 450,
+      date: new Date(2021, 5, 12),
     },
   ];
+
   return (
     <div>
-      <h2>lets get started</h2>
-      <Expense
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
-      ></Expense>
-      <Expense
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-      ></Expense>
+      <h2>Let's get started!</h2>
+      <Expenses items={expenses} />
     </div>
   );
 }
